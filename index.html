@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/bootstrap.min-sketchy.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Sigmar+One" />
+    <title>Martin Tv Trivia</title>
+</head>
+
+
+<body>
+    <div id="backgroundIMG">
+        <div class="container" id="everythingInThisPage">
+            <div class="row" id="highScoreAndTimerRow">
+                <!--col-md-3 helps center the bar to the center of the page-->
+                <div class="col-md-3">
+
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-sm">
+                            <!--High scores button that will stop the timer and let you view the scores-->
+                            <button class="btn btn-primary" id="highScoreBtn">
+                                View High Scores
+                            </button>
+                        </div>
+                        <!--Timer text and the span that counts down time-->
+                        <div class="col-sm text-right" id="boxTimer">
+                            Timer:
+                            <span id="timerCountdown">200</span> sec
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+
+                </div>
+            </div>
+
+            <div class="row" id="contentRow">
+                <div class="col-md-3">
+
+                </div>
+                <!--Content boxes that show or hide depending on quiz.-->
+                <div class="col-md-6" id="contentBox">
+                    <!--Welcome box shows by default-->
+                    <div id="welcome">
+                        <h1>Do you love the tv show "Martin"? This quiz will be fun!</h1>
+                        <hr>
+                        <p>There are 10 random questions. You will get 200 seconds to answer as many questions as possible!
+                            Your score is based on how many questions you answered correctly and how much time you have left. Show off your high score by typing your initals at the end of the quiz!</p>
+                        <button type="button" class="btn btn-primary" id="getStarted">Get Started</button>
+                    </div>
+
+                    <!--Question box populates from the questions array in javascript-->
+                    <div id="question">
+                        <h3 id="questionTxt"></h3>
+                        <br>
+                        <button type="button" class="btn answer btn-secondary btn-block" id="choice1"></button>
+                        <button type="button" class="btn answer btn-secondary btn-block" id="choice2"></button>
+                        <button type="button" class="btn answer btn-secondary btn-block" id="choice3"></button>
+                        <button type="button" class="btn answer btn-secondary btn-block" id="choice4"></button>
+                        <hr>
+                        <!--Feedback div populates depending on user answer choice-->
+                        <div id="feedback">
+                        </div>
+                    </div>
+
+                    <!--Ending score box only shows up if you fully complete the quiz. You can enter initials here.-->
+                    <div id="endingScoreBox">
+                        <h3 id="endingScore"></h3>
+                        <p>Please enter your initials: <input type="text" id="initials" maxlength="2">
+                        </p>
+                        <button type="button" class="btn btn-secondary btn-block" id="saveInitials">Save</button>
+
+                    </div>
+
+                    <!--High scores box shows up if you click on button or enter your initials to log score into local storage-->
+                    <div id="highScores">
+                        <h3>High Scores</h3>
+                        <ol id="highScoresList">
+
+                        </ol>
+                        <!--button to clear local storage-->
+                        <button id="clearScores">Clear High Scores</button>
+                        <!--button to restart the quiz-->
+                        <button id="startOver">Start Over</button>
+                    </div>
+
+                </div>
+                <div class="col-md-3">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>

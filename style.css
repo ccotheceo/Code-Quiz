@@ -1,0 +1,34 @@
+body {
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+#highScoreAndTimerRow {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#contentBox, #boxTimer {
+    background-color: #ffffffdc;
+    border: 12px double #0062CC;
+    border-radius: 40px 40px 40px 40px;
+}
+
+#welcome, #highScores {
+    margin-bottom: 10px;
+}
+
+#initials {
+    text-transform: uppercase;
+}
+
+h1 { 
+    font-family: "Sigmar One"; 
+    font-size: 24px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 700; 
+    line-height: 26.4px; 
+}
